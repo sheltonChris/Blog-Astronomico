@@ -1,0 +1,48 @@
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    padding-top: 8px;
+    padding-bottom: 0;
+    margin-top: 30px;
+    background-color: #000418;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 8px;
+}
+
+footer li {
+    display: inline;
+    list-style: none;
+}
+
+footer li a img {
+    padding-top: 5px;
+    height: 20px;
+    padding-right: 8px;
+
+} 
+
+@media screen and (max-width:767px) {
+    footer p {
+        font-size: 17px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px)  {
+
+    footer p {
+        font-size: 20px;
+    }
+}

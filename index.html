@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Astronomico</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body data-bs-theme="dark">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #020518;">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/logo de um site de astronomia.png" height="70" alt="Logo">
+                </a>
+
+                <!-- Botão Hamburguer (Menu Responsivo) -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuResponsivo" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menu de Navegação"></button>>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu de Navegação -->
+                <div class="collapse navbar-collapse" id="menuResponsivo">
+                    <ul class="navbar-nav me-auto"> <!-- Adicionado 'me-auto' para alinhar -->
+                        <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Novidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+                    </ul>
+
+                    <!-- Barra de Pesquisa -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar...">
+                        <button type="submit" class="btn btn-secondary">Pesquisar</button>
+                    </form>
+
+                    <!-- Botão de Login -->
+                    <button class="btn btn-primary ms-3" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#menuCanvas" aria-controls="menuCanvas">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Offcanvas do Login -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuCanvas" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Faça seu Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="exemplo@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pass" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Digite sua senha">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="checkLogin">
+                        <label for="checkLogin">Lembrar-me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    <h4 class="h5 mt-2 text-center">Ainda não tem login, <a class="text-primary"
+                            href="#">cadastre-se</a></h4>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div id="carouselNovidades" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators ">
+                    <button type="button" data-bs-target="#carouselNovidades" data-bs-slide-to="0"
+                        class="active bg-light" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselNovidades" data-bs-slide-to="1" class="bg-light"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselNovidades" data-bs-slide-to="2" class="bg-light"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselNovidades" data-bs-slide-to="3" class="bg-light"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="https://www.nasa.gov/wp-content/uploads/2025/02/lrc-1943-b701-p-33037large.jpg?resize=1536,1212"
+                            height="500px" alt="" class="d-block w-100 ">
+                        <div class="carousel-caption  d-block">
+                            <h5 class="h2 text-capitalize text-light">Imagem do dia</h5>
+                            <p class="lead text-light">Aprendiz de Laboratório Langley no Trabalho</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://www.nasa.gov/wp-content/uploads/2024/08/spherex-march2022-update-still01-r08-spacebackground-5760x3240-1.jpg?resize=1536,864"
+                            height="500px" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-block">
+                            <h5 class="h2 text-capitalize text-light">Missão SPHEREx</h5>
+                            <p class="lead text-light">Assista no dia <strong>4 de Março</strong> ao vivo no site da <a
+                                    class="text-decoration-none"
+                                    href="https://plus.nasa.gov/scheduled-video/spherex-and-punch-launch/"><strong>NASA</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://www.nasa.gov/wp-content/uploads/2025/02/highvelocityexoplanet-1-ac.jpg"
+                            height="500px" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-block">
+                            <a class="text-decoration-none" href="#">
+                                <h5 class="h2 text-capitalize text-light">Exoplanetas</h5>
+                                <p class="lead text-light">Cientistas da NASA detectam candidato a sistema de
+                                    exoplanetas mais rápido</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2025/webb-STScI-01JKREFYNJE7MT5SG2H0FBYG75-2K.png?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint"
+                            height="500px" alt="" class="d-block w-100">
+                        <div class="carousel-caption d-block">
+                            <h5 class="h2 text-capitalize text-light">Buraco Negro</h5>
+                            <p class="lead text-light">Disco em chamas em torno do buraco negro da Via Láctea (conceito
+                                artístico)</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="carousel-control-prev" data-bs-target="#carouselNovidades"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button type="button" class="carousel-control-next" data-bs-target="#carouselNovidades"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <article>
+            <div class="container">
+                <h2 class="mt-5">Últimas Noticías</h2>
+                <div class="row">
+                    <div class="col-lg-4 my-4 col-md-6 col-sm-12">
+                        <div class="card h-100" style="width: 20rem;">
+                            <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/nebulae/supernova-remnant/Hubble_Veil_SMALL_potw2508a.jpg?w=1280&h=1258&fit=crop&crop=faces%2Cfocalpoint"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Hubble captura nova visão do véu colorido</h5>
+                                <p class="card-text">Hubble mais uma vez levanta o véu sobre um famoso - e
+                                    frequentemente fotografado - remanescente de supernova: a Nebulosa do Véu. </p>
+                                <a class="btn btn-primary" href="#">Leia Mais</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-4 col-md-6 col-sm-12">
+                        <div class="card h-100 " style="width: 20rem;">
+                            <img src="https://www.nasa.gov/wp-content/uploads/2025/03/blue-ghost-first-image-1.jpg?resize=768,576"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Touchdown! Carregando a ciência da NASA, o fantasma azul do
+                                    Firefly pousa na Lua</h5>
+                                <p class="card-text">
+                                    Carregando um conjunto de ciência e tecnologia da NASA, a Missão Blue Ghost 1 da
+                                    Firefly Aerospace pousou com sucesso às 3h34 EST no domingo, perto de uma
+                                    característica vulcânica chamada Mons Latreille dentro do Mare Crisium </p>
+                                <a class="btn btn-primary" href="#">Leia Mais</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-4 col-md-6 col-sm-12">
+                        <div class="card h-100 " style="width: 20rem;">
+                            <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar-system/skywatching/2025/march/Lunar_eclipse_credit_Preston%20Dyches_CC_BY-NC_2.0.jpg"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">What's Up: Dicas de observação do céu de março de 2025 da NASA
+                                </h5>
+                                <p class="card-text">Um planeta em movimento rápido e uma lua carmesim!
+                                    Pegue Mercúrio se puder, depois fique acordado até tarde para um eclipse lunar total
+                                    e aprenda a verdade sobre o lado escuro da Lua. </p>
+                                <a class="btn btn-primary" href="#">Leia Mais</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-4 col-md-6 col-sm-12">
+                        <div class="card h-100 " style="width: 20rem;">
+                            <img src="https://www.nasa.gov/wp-content/uploads/2025/02/acd24-0185-029.jpg"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">NASA instala escudo térmico na primeira espaçonave privada com
+                                    destino a Vênus</h5>
+                                <p class="card-text">Engenheiros do Centro de Pesquisa Ames da NASA, no Vale do Silício,
+                                    na Califórnia, Bohdan Wesely, à direita, e Eli Hiss, à esquerda, completam uma
+                                    verificação de ajuste das duas metades de uma cápsula espacial que estudará as
+                                    nuvens de Vênus em busca de sinais de vida.</p>
+                                <a class="btn btn-primary" href="#">Leia Mais</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-4 col-md-6 col-sm-12">
+                        <div class="card h-100 " style="width: 20rem;">
+                            <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/galaxies/andromeda/Hubble_Andromeda_Satellites_STScI-01JMFYK4PCJZ7G5VH06565V4VV.jpg?w=4758&h=4281&fit=clip&crop=faces%2Cfocalpoint"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Hubble da NASA fornece visão panorâmica do ecossistema da galáxia
+                                    de Andrômeda</h5>
+                                <p class="card-text">Localizada a 2,5 milhões de anos-luz de distância, a majestosa
+                                    galáxia de Andrômeda aparece a olho nu como um objeto fraco em forma de fuso
+                                    aproximadamente do tamanho angular da Lua cheia</p>
+                                <a class="btn btn-primary" href="#">Leia Mais</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 my-4 col-md-6 col-sm-12">
+                        <div class="card h-100 " style="width: 20rem;">
+                            <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/f/final_lucy_high-end-render_pira-1.jpg?w=768&h=504&fit=crop&crop=faces%2Cfocalpoint"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">NASA seleciona cientistas participantes para participar da missão
+                                    Lucy Asteroid</h5>
+                                <p class="card-text">A NASA selecionou oito cientistas participantes para se juntarem à
+                                    sua missão Lucy aos asteróides troianos de Júpiter. Esses asteróides são
+                                    remanescentes do nosso sistema solar primitivo presos em órbitas estáveis associadas
+                                    - mas não próximas - ao planeta Júpiter </p>
+                                <a class="btn btn-primary" href="#">Leia Mais</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <p class="text-light">&copy; Todos os diretos reservados</p>
+            <ul>
+                <li><a href="https://instagram.com"><img src="imgs/instagram.png" alt="Istagram"></a></li>
+                <li><a href="https://facebook.com"><img src="imgs/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://x.com"><img src="imgs/twitter.png" alt="twitter"></a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>
